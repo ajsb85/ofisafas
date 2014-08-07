@@ -2,7 +2,7 @@
     api_key: "17e4b5491bc14bf9846a857ffa41f8e6",
     picker: "bottom-right",
     detectlang: true,
-    autocollect: true
+    autocollect: false
   };
 
 // Initialize your app
