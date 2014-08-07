@@ -1,71 +1,275 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Ofisafas by alexsalas</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>OFISAFAS®</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/framework7.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+		
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+		<link rel="stylesheet" type="text/css" href="css/calendar.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Ofisafas</h1>
-        <p>Web Site</p>
-
-        <p class="view"><a href="https://github.com/alexsalas/ofisafas">View the Project on GitHub <small>alexsalas/ofisafas</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/alexsalas/ofisafas/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/alexsalas/ofisafas/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/alexsalas/ofisafas">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/alexsalas">alexsalas</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-reveal">
+      <div class="content-block">
+        <p>Right panel content goes here</p>
+      </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+    <!-- Views-->
+    <div class="views">
+      <!-- Put panels-overlay and left-panel with view inside of views-->
+      <!-- Panels overlay-->
+      <div class="panel-overlay"></div>
+      <!-- Left panel with reveal effect-->
+      <div class="panel panel-left panel-cover">
+        <!-- Left view-->
+        <div class="view view-left navbar-through">
+          <a href="index.html" data-view=".view-main" class="item-link close-panel">
+						<div class="navbar">
+							<div class="navbar-inner">
+								<div class="left"></div>
+								<div class="center sliding">
+									<img src="images/ofisafas.svg" alt="logotipo"></img>
+								</div>
+								<div class="right"></div>
+							</div>
+          	</div>
+					</a>
+          <div class="pages">
+            <div data-page="index-left" class="page">
+              <div class="page-content">
+                <div class="content-block">
+                	<a href="login.html"  data-view=".view-main" class="button close-panel">
+										Inicio de sesión
+									</a>
+								</div>
+<!--								<div class="content-block-title">Left View Links</div>
+                <div class="list-block">
+                  <ul>
+                    <li><a href="left-page-1.html" class="item-link">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title">Left Page 1</div>
+                          </div>
+                        </div></a></li>
+                    <li><a href="left-page-2.html" class="item-link">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title">Left Page 2</div>
+                          </div>
+                        </div></a></li>
+                  </ul>
+                </div>-->
+                <div class="content-block-title">Bienvenidos</div>
+                <div class="list-block accordion-list">
+                  <ul>
+										<li class="accordion-item accordion-item-expanded"><a href="#" class="item-link item-content">
+												<div class="item-inner">
+													<div class="item-title">Catálogo</div>
+												</div></a>
+											<div class="accordion-item-content">
+												<div class="list-block">
+													<ul>
+														<li><a href="grid.html" data-view=".view-main" class="item-link close-panel">
+															<div class="item-content">
+																<div class="item-media"><i class="icon icon-sillas"></i></div>
+																<div class="item-inner">
+																	<div class="item-title">Sillas de Oficina</div>
+																</div>
+															</div>
+														</a></li>
+														<li><a href="about.html" data-view=".view-main" class="item-link close-panel">
+															<div class="item-content">
+																<div class="item-media"><i class="icon icon-mobiliario"></i></div>
+																<div class="item-inner">
+																	<div class="item-title">Mobiliario de Oficina</div>
+																</div>
+															</div>
+														</a></li>
+														<li><a href="about.html" data-view=".view-main" class="item-link close-panel">
+															<div class="item-content">
+																<div class="item-media"><i class="icon icon-cafeteria"></i></div>
+																<div class="item-inner">
+																	<div class="item-title">Hogar & Cafetería</div>
+																</div>
+															</div>
+														</a></li>
+														<li><a href="about.html" data-view=".view-main" class="item-link close-panel">
+															<div class="item-content">
+																<div class="item-media"><i class="icon icon-plus"></i></div>
+																<div class="item-inner">
+																	<div class="item-title">Ofisafas Plus</div>
+																</div>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li><a href="about.html" data-view=".view-main" class="item-link close-panel">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title">Nosotros</div>
+                          </div>
+                        </div></a></li>
+                    <li><a href="#" data-view=".view-main" class="item-link close-panel promo">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title">Promociones</div>
+                          </div>
+                        </div></a></li>
+                   <li><a href="news.html" data-view=".view-main" class="item-link close-panel">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title">Noticias</div>
+                          </div>
+                        </div></a></li>
+                   <li><a href="location.html" data-view=".view-main" class="item-link close-panel">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title">Ubicación</div>
+                          </div>
+                        </div></a></li>
+                   <li><a href="calendar.html" data-view=".view-main" class="item-link close-panel">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title">Horario</div>
+                          </div>
+                        </div></a></li>
+										<li class="accordion-item"><a href="#" class="item-link item-content">
+												<div class="item-inner">
+													<div class="item-title">Redes Sociales</div>
+												</div></a>
+											<div class="accordion-item-content">
+												<div class="list-block">
+													<ul>
+														<li>
+															<a href="https://www.facebook.com/Ofisafas" class="external" rel="external" target="_blank">
+																<div class="item-content">
+																	<div class="item-media"><i class="icon icon-camera"></i></div>
+																	<div class="item-inner">
+																		<div class="item-title">Facebook</div>
+																	</div>
+																</div>
+															</a>
+														</li>
+														<li>
+															<a href="https://twitter.com/ofisafas" class="external" rel="external" target="_blank">
+																<div class="item-content">
+																	<div class="item-media"><i class="icon icon-camera"></i></div>
+																	<div class="item-inner">
+																		<div class="item-title">Twitter</div>
+																	</div>
+																</div>
+															</a>
+														</li>
+														<li>
+															<a href="https://www.youtube.com/user/Ofisafas" class="external" rel="external" target="_blank">
+																<div class="item-content">
+																	<div class="item-media"><i class="icon icon-camera"></i></div>
+																	<div class="item-inner">
+																		<div class="item-title">Youtube</div>
+																	</div>
+																</div>
+															</a>
+														</li>
+														<li>
+															<a href="http://instagram.com/ofisafas" class="external" rel="external" target="_blank">
+																<div class="item-content">
+																	<div class="item-media"><i class="icon icon-camera"></i></div>
+																	<div class="item-inner">
+																		<div class="item-title">Instagram</div>
+																	</div>
+																</div>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</li>
+                    <li><a href="contacts.html" data-view=".view-main" class="item-link close-panel">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title">Contáctenos</div>
+                          </div>
+                        </div></a>
+										</li>									
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right view, it is main view-->
+      <div class="view view-main navbar-through">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="center sliding">Main View</div>
+            <div class="right"><a href="#" data-panel="left" class="link open-panel icon-only"><i class="icon icon-bars-blue"></i></a></div>
+          </div>
+        </div>
+        <div class="toolbar">
+          <div class="toolbar-inner">
+						<a href="#" class="link">App v0.1</a>
+						<a href="tel:05006347232" class="external" rel="external">0500-OFISAFAS</a>
+						<a href="#" data-popover=".popover-menu" class="open-popover link">Feedback</a>
+					</div>
+        </div>
+        <!-- Pages-->
+        <div class="pages">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index-1" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              <div class="content-block-title">Hello</div>
+              <div class="content-block">
+                <div class="content-block-inner">
+                  <p>This is an example of split view application layout where left view degrades to panel on narrow screens (iPad portrait and iPhone). It behaves like default Mail app on iOS 7.</p>
+                  <p>Each view may have different layout, different navbar type (dynamic, fixed or static) or without navbar. You can easily control one view from another without any line of JavaScript just using "data-view" attribute on links.</p>
+                  <p>Additional right panel is also available: <a href="#" data-panel="right" class="open-panel">right panel</a></p>
+                </div>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner">
+                          <div class="item-title">About</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+		<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+		<script type="text/javascript" src="js/jquery.calendario.js"></script>
+		<script type="text/javascript" src="js/jquery.imagesloaded.js"></script>
+		<script type="text/javascript" src="js/grid.js"></script>
+		<script type="text/javascript" src="js/data.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
   </body>
 </html>
