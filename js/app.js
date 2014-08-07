@@ -199,5 +199,6 @@ myApp.onPageBeforeRemove('photo-browser-slides', function (page) {
 //We can also add callback for all pages:
 myApp.onPageInit('*', function (page) {
   console.log(page.name + ' initialized'); 
+	Transifex.live.translateNode($('.view-main').get(0));
 	promoBrowserPage.expositionOff();
 });
