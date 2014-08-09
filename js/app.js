@@ -1,9 +1,78 @@
   window.liveSettings = {
     api_key: "17e4b5491bc14bf9846a857ffa41f8e6",
-    picker: "bottom-right",
+    picker: "tx-live-lang-picker",
     detectlang: true,
     autocollect: false
   };
+
+//This is called each time the languages list is retrieved
+//from Transifex Live. This may happen more than once so we should
+//be able to handle this case.
+Transifex.live.onFetchLanguages(function(languages) {
+
+    //set the language selector to the source language (default)
+   // $('#language-current').html(
+   //     Transifex.live.getSourceLanguage().name
+   // );
+/*
+    //empty our language list
+    $('#language-selector').empty();
+
+    //add translation languages to the list
+    for (var i = 0; i < languages.length; ++i) {
+        $('#language-selector').append(
+            '<li data-code="' + languages[i].code +
+            '" data-name="' + languages[i].name +
+            '">' + languages[i].name + '</li>'
+        );
+    }
+
+    //handle user selecting a language
+    $('#language-selector').find('li').click(function(e) {
+        e && e.preventDefault();
+        var code = $(this).closest('[data-code]').data('code');
+        var name = $(this).closest('[data-code]').data('name');
+
+        //tell transifex live to translate the page
+        //based on user selection
+        Transifex.live.translateTo(code, true);
+    });
+
+    //called when Transifex Live successfully translates the
+    //page to a language. In that case lets update the
+    //selected language of the widget
+    Transifex.live.onTranslatePage(function(language_code) {
+        $('#language-current').html(
+            Transifex.live.getLanguageName(language_code)
+        );
+    });*/
+		$( "#tx-live-lang-picker" ).empty();
+    for (var i = 0; i < languages.length; ++i) {
+            console.log("code: "+languages[i].code);
+            console.log("name: "+languages[i].name);
+			$( "#tx-live-lang-picker" ).append('<option value='+languages[i].code+'>'+languages[i].name+'</option>');
+    }
+   Transifex.live.onTranslatePage(function(language_code) {
+        console.log("onTranslatePage: "+Transifex.live.getLanguageName(language_code));
+    });
+	
+		console.log("getSourceLanguage: "+Transifex.live.getSourceLanguage().name);
+	 console.log("detectlang: "+window.liveSettings.detectlang);
+		
+
+});
+
+$( "#tx-live-lang-picker" ).change(function() {
+	Transifex.live.translateTo($( "#tx-live-lang-picker" ).val(), true);
+});
+
+var userLang = navigator.language || navigator.userLanguage;
+
+console.log("userLang.split: "+userLang.split('-')[0]);
+console.log("userLang: "+userLang);
+console.log("systemLanguage: "+navigator.systemLanguage);
+console.log("browserLanguage: "+navigator.browserLanguage);
+console.log("languages: "+navigator.languages);
 
 // Initialize your app
 var myApp = new Framework7({
@@ -77,11 +146,14 @@ myApp.onPageInit('location', function (page) {
 							 {		featureType:'road',						stylers:[{saturation:-100},	{lightness:45}]},
 							 {		featureType:'road.highway',		stylers:[{visibility:'simplified'}]	},
 							 {		featureType:'road.arterial',	stylers:[{visibility:'off'}], elementType:'labels.icon'},
+							 {		featureType:'road.highway',		stylers:[{color:'#ffffff'}], 	elementType: 'geometry.fill'},
+							 {		featureType:'road.arterial',	stylers:[{color:'#ffffff'}], 	elementType: 'geometry.fill'},
+							 {		featureType:'road.local',			stylers:[{color:'#ffffff'}], 	elementType: 'geometry.fill'},
 							 {		featureType:'administrative',	stylers:[{color:'#444444'}],	elementType:'labels.text.fill'},
 							 {		featureType:'transit',				stylers:[{visibility:'off'}]},
 							 {		featureType:'poi',						stylers:[{visibility:'on'}]},
- 							 {    featureType: 'poi',   					stylers:[{ visibility:'off'}], elementType: 'geometry.fill'},
-							 {    featureType: 'poi',   					stylers:[{ visibility:'off'}], elementType: 'labels.icon'}]
+ 							 {    featureType:'poi',   					stylers:[{ visibility:'off'}], elementType: 'geometry.fill'},
+							 {    featureType:'poi',   					stylers:[{ visibility:'off'}], elementType: 'labels.icon'}]
 	};
 
 	// Get the HTML DOM element that will contain your map 
@@ -101,6 +173,12 @@ myApp.onPageInit('location', function (page) {
 	
 	marker.setAnimation(google.maps.Animation.DROP);
 
+	$( window ).resize(function() {
+    window.setTimeout(function() {
+      map.panTo(myLatlng);
+    }, 30);
+
+	});
 
 });
 
@@ -111,7 +189,7 @@ myApp.onPageInit('services', function (page) {
 
 myApp.onPageInit('grid', function (page) {
   //mainView.loadPage('about.html');
-	Grid.init();
+	//Grid.init();
 });
 
 //Sometimes we may need the same callback for few pages. We may separate page names with space:
@@ -176,6 +254,7 @@ var promoBrowserPage = myApp.photoBrowser({
     type: 'page',
     backLinkText: 'Atras',
 		zoom: false,
+		theme: 'dark',
 		maxZoom: 1,
 		minZoom: 1
 });

@@ -1,3 +1,7 @@
+html, body{
+	background: #efeff4;
+}
+
 /* Default Status bar background */
 .statusbar-overlay {
     background: pink;
@@ -6,10 +10,6 @@
     transition: 400ms;
 }
 
-/* Your app custom files in this file */
-.view-left {
-  border-right: 1px solid #b2b2b2;
-}
 /* This will fix flicker navbar in left panel view */
 .panel-left .page-content {
   padding: 0;
@@ -61,4 +61,89 @@ body.with-panel-right-reveal .panel-overlay {
   .view-main .navbar .open-panel {
     display: none;
   }
+}
+
+
+/*.page:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+		background: url(../images/4.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		
+    width: 100%;
+    height: 100%;
+    opacity : 0.2;
+    z-index: -1;
+}*/
+
+.pages {
+	background: #f58634;
+}
+
+.list-block ul {
+	background: #ffffff;
+	color: #333;
+}
+
+.page-content {
+	background: transparent;
+	border-right: 1px solid #b2b2b2;
+}
+
+.toolbar {
+	background: #f58634;
+	border-top: 1px solid #f58634;
+}
+
+.navbar {
+	background: #f58634;
+	border-bottom: 1px solid #f58634;
+}
+
+.navbar a.link, .toolbar a.link, .toolbar a{
+	color: #ffffff;
+}
+
+.navbar, .toolbar{
+	color: #ffffff;
+}
+
+.button.active {
+	background: #f58634;
+	color: #fff;
+}
+
+.button {
+	border: 1px solid #f58634;
+	color: #f58634;
+}
+
+a{
+	color: #f58634;
+}
+
+.label-switch input[type="checkbox"]:checked + .checkbox {
+	background: #f58634;
+}
+
+.button:active {
+  background: rgba(245, 134, 52, 0.15)
+}
+
+.view-left {
+	border-right: 0px solid #f58634;
+}
+
+.list-block .item-link.list-button{
+	color: #f58634;
+}
+
+.navbar-inner, .toolbar-inner {
+	background: #f58634;
 }
