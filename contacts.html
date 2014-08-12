@@ -45,101 +45,105 @@
 				</div>
 <div class="content-block-title">Formulario de contacto</div>
 <div class="list-block">
-  <ul>
-    <!-- Text inputs -->
-    <li>
-      <div class="item-content">
-        <!--<div class="item-media">
-					<i class="icon icon-form-name"></i>
-				</div>-->
-        <div class="item-inner">
-          <div class="item-title label">Nombre</div>
-          <div class="item-input">
-            <input type="text" placeholder="Nombre y Apellido">
-          </div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="item-content">
-        <!--<div class="item-media">
-					<!--<i class="icon icon-form-email"></i>
-				</div>-->
-        <div class="item-inner">
-          <div class="item-title label">E-mail</div>
-          <div class="item-input">
-            <input type="email" placeholder="nombredeusario@dominio.tld">
-          </div>
-        </div>
-      </div>
-    </li>
-		<li>
-			<div class="item-content">
-				<!--<div class="item-media">
-					<!--<i class="icon icon-form-tel"></i>
-				</div>-->
-				<div class="item-inner">
-					<div class="item-title label">Celular</div>
-					<div class="item-input">
-						<input placeholder="+584XXXXXXXXX" type="tel">
+	<form id="contact" action="send-here.html" method="GET" class="ajax-submit">
+		<ul>
+			<!-- Text inputs -->
+			<li>
+				<div class="item-content">
+					<!--<div class="item-media">
+						<i class="icon icon-form-name"></i>
+					</div>-->
+					<div class="item-inner">
+						<div class="item-title label">Nombre</div>
+						<div class="item-input">
+							<input type="text" name="name" placeholder="Nombre y Apellido">
+						</div>
 					</div>
 				</div>
-			</div>
-		</li>
-    <!-- Select -->
-    <li>
-      <div class="item-content">
-        <!--<div class="item-media">
-					<!--<i class="icon icon-form-gender"></i>
-				</div>-->
-        <div class="item-inner">
-          <div class="item-title label">Departamento</div>
-          <div class="item-input">
-            <select>
-              <option>Información</option>
-              <option>Ventas</option>
-              <option>Compras</option>
-              <option>Informática</option>
-            </select>
-          </div>
-        </div>
-      </div>
-    </li>
-    <!-- Switch (Checkbox) -->
-    <li>
-      <div class="item-content">
-        <!--<div class="item-media">
-					<!--<i class="icon icon-form-toggle"></i>
-				</div>-->
-        <div class="item-inner">
-          <div class="item-title label">Sucribete</div>
-          <div class="item-input">
-            <label class="label-switch">
-              <input type="checkbox">
-              <div class="checkbox"></div>
-            </label>
-          </div>
-        </div>
-      </div>
-    </li>
-    <!-- Textarea -->
-    <li class="align-top">
-      <div class="item-content">
-        <!--<div class="item-media">
-					<i class="icon icon-form-comment"></i>
-				</div>-->
-        <div class="item-inner">
-          <div class="item-title label">Mensaje</div>
-          <div class="item-input">
-            <textarea></textarea>
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>
+			</li>
+			<li>
+				<div class="item-content">
+					<!--<div class="item-media">
+						<!--<i class="icon icon-form-email"></i>
+					</div>-->
+					<div class="item-inner">
+						<div class="item-title label">E-mail</div>
+						<div class="item-input">
+							<input type="email" name="email" placeholder="nombredeusario@dominio.tld">
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+					<!--<div class="item-media">
+						<!--<i class="icon icon-form-tel"></i>
+					</div>-->
+					<div class="item-inner">
+						<div class="item-title label">Celular</div>
+						<div class="item-input">
+							<input placeholder="+584XXXXXXXXX" name="tel" type="tel">
+						</div>
+					</div>
+				</div>
+			</li>
+			<!-- Select -->
+			<li>
+				<div class="item-content">
+					<!--<div class="item-media">
+						<!--<i class="icon icon-form-gender"></i>
+					</div>-->
+					<div class="item-inner">
+						<div class="item-title label">Departamento</div>
+						<div class="item-input">
+							<select name="depart" >
+								<option>Información</option>
+								<option>Ventas</option>
+								<option>Compras</option>
+								<option>Informática</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</li>
+			<!-- Switch (Checkbox) -->
+			<li>
+				<div class="item-content">
+					<!--<div class="item-media">
+						<!--<i class="icon icon-form-toggle"></i>
+					</div>-->
+					<div class="item-inner">
+						<div class="item-title label">Sucribete</div>
+						<div class="item-input">
+							<label class="label-switch">
+								<input name="newsletter" type="checkbox">
+								<div class="checkbox"></div>
+							</label>
+						</div>
+					</div>
+				</div>
+			</li>
+			<!-- Textarea -->
+			<li class="align-top">
+				<div class="item-content">
+					<!--<div class="item-media">
+						<i class="icon icon-form-comment"></i>
+					</div>-->
+					<div class="item-inner">
+						<div class="item-title label">Mensaje</div>
+						<div class="item-input">
+							<textarea name="body" ></textarea>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</form>
 </div>
 <div class="content-block">
-  <a href="#" class="button form-to-json">Get Form Data</a>
+  <a href="#" class="button send">Enviar</a>
+	<br/>
+	<br/>
 </div>
 			</div>
 	</div>

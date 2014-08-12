@@ -343,3 +343,18 @@ myApp.onPageInit('news', function (page) {
 	});   
 });
  
+
+
+myApp.onPageInit('contacts', function (page) {
+/*	$$('form.ajax-submit').on('submitted', function (e) {
+		var xhr = e.detail.xhr; // actual XHR object
+
+		var data = e.detail.data; // Ajax repsonse from action file
+		// do something with response data
+	});*/
+	
+	$$('.send').on('click', function(){
+		var formData = myApp.formToJSON('#contact');
+		myApp.formStoreData('contact', formData);
+	}); 
+});
