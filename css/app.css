@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'ios7-icon';
+  src:
+    url('../fonts/ios7-icon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html, body{
 	background: #efeff4;
 }
@@ -220,6 +228,7 @@ a{
 
 .card-content .col-33 {
 	text-align: center;
+	display: inline-block;
 	line-height: 35px;
 	font-size: 14px;
 }
@@ -227,4 +236,29 @@ a{
 .card-content .row {
 	background: #efeff4;
 }
+.card-content .row p {
+	width: 100%;
+	height: 100%;
+}
 
+.ios7-icon {
+	vertical-align: bottom;
+	font-size: 20px;
+	margin-right: 4px;
+  font-family: 'ios7-icon';
+  -webkit-text-rendering: geometricPrecision;
+  -moz-text-rendering: geometricPrecision;
+  -ms-text-rendering: geometricPrecision;
+  -o-text-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+/*EDoS*/
+.item-subtitle p{
+	text-indent: 3em;
+}

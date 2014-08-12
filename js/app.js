@@ -320,14 +320,22 @@ myApp.onPageInit('news', function (page) {
 				return;
 			}
 
-			// Generate new items HTML
+/*			// Generate new items HTML
 			var html = '';
 			for (var i = lastIndex + 1; i <= lastIndex + itemsPerLoad; i++) {
 				html += '<li class="item-content"><div class="item-inner"><div class="item-title">Item ' + i + '</div></div></li>';
 			}
 
 			// Append new items
-			$$('.time-line-content').append(html);
+			$$('.time-line-content').append(html);*/
+			
+/*			$('.time-line-content').load( "post.html", function() {
+				alert( "Load was performed." );
+			});
+			*/
+			$.get( "post.html", function( data ) {
+				$( ".time-line-content" ).append(data);
+			});
 
 			// Update last loaded index
 			lastIndex = $$('.ok li').length;
