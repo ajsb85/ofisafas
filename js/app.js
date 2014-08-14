@@ -356,5 +356,6 @@ myApp.onPageInit('contacts', function (page) {
 	$$('.send').on('click', function(){
 		var formData = myApp.formToJSON('#contact');
 		myApp.formStoreData('contact', formData);
+		console.log(formData);
 	}); 
 });
