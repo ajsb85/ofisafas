@@ -1,0 +1,32 @@
+.cbp-fbscroller,
+.cbp-fbscroller section { 
+	height: 100%; 
+}
+
+/* background-attachment does the trick */
+.cbp-fbscroller section {
+	position: relative;
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.no-touch .cbp-fbscroller section {
+	background-attachment: fixed;
+}
+
+#fbsection1 {
+	background-image: url(../images/1.jpg);
+}
+
+#fbsection2 {
+	background-image: url(../images/2.jpg);
+}
+
+#fbsection3 {
+	background-image: url(../images/3.jpg);
+}
+
+#fbsection4 {
+	background-image: url(../images/4.jpg);
+}

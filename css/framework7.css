@@ -269,7 +269,7 @@ p {
   background: #efeff4;
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  /* transform: translate3d(0, 0, 0); */
   opacity: 1;
   -webkit-box-shadow: none;
   box-shadow: none;
